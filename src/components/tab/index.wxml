@@ -1,0 +1,7 @@
+<view class="vx-class {{ ss.wrap }}" bindtap="onTap">
+    <view class="{{ ss.title }}" wx:if="{{ title }}">{{ title }}</view>
+    <block wx:else>
+        <slot></slot>
+    </block>
+    <view class="{{ ss.bar }}" wx:if="{{ current }}"></view>
+</view>

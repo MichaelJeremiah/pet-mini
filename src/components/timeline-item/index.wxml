@@ -1,0 +1,10 @@
+<view class="vx-class {{ ss.wrap }} {{ className }}">
+    <view class="{{ ss.tail }}"></view>
+    <view class="{{ ss.dot }}" style="{{ extStyle }}">
+    	<slot wx:if="{{ custom }}" name="dot"></slot>
+    </view>
+    <view class="{{ ss.content }}">
+    	<text class="{{ ss.title }}">{{ content }}</text>
+        <slot></slot>
+    </view>
+</view>

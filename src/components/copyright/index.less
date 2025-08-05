@@ -1,0 +1,25 @@
+@import 'themes';
+@import 'mixins';
+
+.@{vx-prefix}-copyright {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30rpx 0;
+
+    &__logo {
+        width: 120rpx;
+        height: 50rpx;
+        margin-bottom: 2rpx;
+    }
+
+    &__text {
+        color: #bfbfbf;
+        font-size: 24rpx;
+        font-weight: 400;
+    }
+
+    &--light &__text {
+        color: #ffffff;
+    }
+}

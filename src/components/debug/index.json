@@ -1,0 +1,7 @@
+{
+    "component": true,
+    "usingComponents": {
+        "devtools": "./devtools/index",
+        "system-info": "./system-info/index"
+    }
+}

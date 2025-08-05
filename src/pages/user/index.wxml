@@ -1,0 +1,39 @@
+<vx-navbar title="{{navbar.title}}" virtual="{{navbar.virtual}}" background="{{navbar.background}}" />
+
+<view class="container">
+    <vx-navbar-fake />
+
+    <view class="header">
+        <view class="userinfo">
+            <view class="userinfo__name">我的王泡芙</view>
+            <view class="userinfo__intro">爱猫猫，爱狗狗</view>
+            <view class="userinfo__follow">
+                <image src="/images/icon_follow_black.png"/>
+                <text>关注</text>
+            </view>
+        </view>
+
+        <image class="userinfo__avatar" src="https://s2-1257336670.cos.ap-shanghai.myqcloud.com/images/2joyyy-1670337242940-W176H129.png" mode="aspectFill"/>
+    </view>
+
+    <view class="data">
+        <view class="data-item">
+            <view class="data-value">158</view>
+            <view class="data-label">粉丝</view>
+        </view>
+        <view class="data-item">
+            <view class="data-value">66</view>
+            <view class="data-label">关注</view>
+        </view>
+        <view class="data-item">
+            <view class="data-value">3152</view>
+            <view class="data-label">被赞</view>
+        </view>
+    </view>
+
+    <vx-card title="最新动态">
+        <block wx:for="{{postList}}" wx:key="index">
+            <biz-post-card user="{{item.user}}" bind:click="onPostClick"/>
+        </block>    
+    </vx-card>
+</view>

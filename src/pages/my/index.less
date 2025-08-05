@@ -1,0 +1,122 @@
+@import 'themes';
+@import 'mixins';
+
+page {
+    background-color: #f6f6f6;
+}
+
+.container {
+    background: url('https://s2-1257336670.cos.ap-shanghai.myqcloud.com/images/ypq6u4-1670310773035-W750H366.png') no-repeat top;
+    background-size: 100% auto;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.userinfo {
+    display: flex;
+    align-items: center;
+    padding: 20rpx 30rpx 40rpx;
+
+    &-avatar {
+        width: 160rpx;
+        height: 160rpx;
+        border-radius: 50%;
+        border: 6rpx solid rgba(255, 255, 255, 0.3);
+    }
+
+    &-content {
+        flex: 1;
+        padding-left: 30rpx;
+    }
+
+    &-nickname {
+        font-size: 42rpx;
+        font-weight: 500;
+        color: @text-color;
+    }
+
+    &-intro {
+        font-size: 26rpx;
+        color: @text-color-secondary;
+    }
+}
+
+.data {
+    display: flex;
+    align-items: center;
+    margin: 0 30rpx;
+    height: 164rpx;
+    border-radius: 20rpx;
+    background-color: #fefffe;
+    box-shadow: 0 0rpx 24rpx 0 rgba(0, 0, 0, 0.1);
+
+    &-item {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &-label {
+        font-size: 24rpx;
+        color: #999;
+    }
+
+    &-value {
+        font-size: 34rpx;
+        font-weight: 600;
+        color: #262628;
+    }
+}
+
+.menu {
+    display: flex;
+    padding: 60rpx 30rpx 50rpx;
+
+    &-item {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &-icon {
+        width: 100rpx;
+        height: 100rpx;
+        vertical-align: top;
+        margin-bottom: 16rpx;
+    }
+
+    &-label {
+        font-size: 24rpx;
+        color: #999;
+    }
+}
+
+.cell {
+    display: flex;
+    align-items: center;
+    padding: 0 40rpx;
+    height: 100rpx;
+
+    &-group {
+        padding: 20rpx 0;
+    }
+
+    &-icon {
+        width: 40rpx;
+        height: 40rpx;
+    }
+
+    &-title {
+        flex: 1;
+        padding-left: 20rpx;
+        font-size: 28rpx;
+        color: @text-color-secondary;
+    }
+
+    &-arrow {
+        width: 10rpx;
+        height: 20rpx;
+    }
+}

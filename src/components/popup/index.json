@@ -1,0 +1,7 @@
+{
+    "component": true,
+    "usingComponents": {
+        "vx-animation-group": "../animation-group/index",
+        "vx-backdrop": "../backdrop/index"
+    }
+}

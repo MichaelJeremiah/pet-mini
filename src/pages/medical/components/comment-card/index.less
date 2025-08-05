@@ -1,0 +1,69 @@
+@import 'themes';
+@import 'mixins';
+
+.comment-card {
+    position: relative;
+    padding: 30rpx;
+
+    &::after {
+        .setBottomLine(#ececec);
+    }
+
+    &-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 24rpx;
+    }
+
+    &-user {
+        display: flex;
+        align-items: center;
+
+        &__avatar {
+            width: 60rpx;
+            height: 60rpx;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+        &__content {
+            padding-left: 16rpx;
+        }
+
+        &__nickname {
+            font-size: 24rpx;
+            color: @text-color-secondary;
+        }
+
+        &__rater {
+            height: 20rpx;
+        }
+    }
+
+    &-date {
+        font-size: 22rpx;
+        color: #999;
+    }
+
+    &-imgs {
+        display: flex;
+
+        > image {
+            width: 220rpx;
+            height: 220rpx;
+            margin-right: 16rpx;
+            margin-bottom: 16rpx;
+            vertical-align: top;
+
+            &:nth-child(3n) {
+                margin-right: 0;
+            }
+        }
+    }
+
+    &-txt {
+        font-size: 28rpx;
+        color: @text-color;
+    }
+}

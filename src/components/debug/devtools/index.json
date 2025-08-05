@@ -1,0 +1,9 @@
+{
+    "component": true,
+    "usingComponents": {
+        "network-debug": "../network-debug/index",
+        "storage-debug": "../storage-debug/index",
+        "store-debug": "../store-debug/index",
+        "console-debug": "../console-debug/index"
+    }
+}

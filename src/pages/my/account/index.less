@@ -1,0 +1,63 @@
+@import "themes";
+@import "mixins";
+
+.cell {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 110rpx;
+    padding: 0 30rpx;
+
+    &::after {
+        .setBottomLine(#ececec);
+        left: 30rpx;
+    }
+
+    &-label {
+        width: 150rpx;
+        font-size: 30rpx;
+        color: @text-color-secondary;
+    }
+
+    &-value {
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+        font-size: 30rpx;
+
+        &--disabled {
+            color: #ccc;
+        }
+    }
+
+    &-input {
+        flex: 1;
+        text-align: right;
+    }
+
+    &-arrow {
+        width: 10rpx;
+        height: 20rpx;
+        margin-left: 20rpx;
+    }
+}
+
+.user-avatar {
+    width: 80rpx;
+    height: 80rpx;
+    border-radius: 50%;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 72rpx;
+    border-radius: 36rpx;
+    color: @text-color;
+    background-color: @primary-color;
+    font-size: 28rpx;
+    font-weight: 500;
+
+}

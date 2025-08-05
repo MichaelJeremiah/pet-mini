@@ -1,0 +1,4 @@
+<view class="vx-class {{ ss.wrap }}" bind:tap="onTap">
+    <image class="{{ ss.logo }}" src="{{ icon[theme] }}"/>
+    <text class="{{ ss.text }}">由策方提供技术支持</text>
+</view>

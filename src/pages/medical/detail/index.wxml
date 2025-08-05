@@ -1,0 +1,61 @@
+<vx-navbar title="{{navbar.title}}" virtual="{{navbar.virtual}}" background="{{navbar.background}}"/>
+
+<view class="container">
+    <vx-navbar-fake />
+    <view class="header">
+        <view class="info">
+            <image class="info-avatar" src="https://s2-1257336670.cos.ap-shanghai.myqcloud.com/images/gnntqy-1670300109330-W110H90.png" />
+            <view class="info-content">
+                <view class="info-name">淘气联盟宠物医院</view>
+                <view class="info-rank">医院人气排名第3</view>
+                <vx-rater controlled value="{{4}}"/>
+            </view>
+        </view>
+        <view class="info-hours">营业时间：9:00-21:00</view>
+        <view class="info-intro">医院概况：淘气联盟宠物医院这里是简单的宠物医院的概况介绍，最多显示3行内容，超出3行内容就可以显示超出三行内容显示省略号超出三行内容显示省略号…</view>
+
+        <view class="location">
+            <view class="location-content">
+                <view class="location-distance">距你 21.22km</view>
+                <view class="location-address">北京市朝阳区太白南路39号</view>
+            </view>
+            <view class="location-action">
+                <view class="location-action-btn">
+                    <image src="/images/icon_navigation.png" />
+                    <text>导航</text>
+                </view>
+                <view class="location-action-btn">
+                    <image src="/images/icon_phone.png" />
+                    <text>致电</text>
+                </view>
+            </view>
+        </view>
+    </view>
+
+    <vx-card title="认证医师">    
+        <scroll-view class="doctor-list" scroll-x="true" scroll-y="false" upper-threshold="50" lower-threshold="50" >
+             <block wx:for="{{doctorList}}" wx:key="index" >
+                <biz-doctor-card
+                    class="doctor-item"
+                    avatar="{{item.avatar}}"
+                    name="{{item.name}}"
+                    position="{{item.position}}"
+                    workage="{{item.workage}}"
+                    bind:click="onDoctorClick"
+                />
+            </block>
+        </scroll-view>
+    </vx-card>
+
+    <vx-card title="用户评价" moreText="查看全部" moreLink="/pages/medical/evaluate/index">
+        <block wx:for="{{commentList}}" wx:key="index">
+            <biz-comment-card
+                user="{{item.user}}"
+                star="{{item.star}}"
+                date="{{item.date}}"
+                imgs="{{item.imgs}}"
+                content="{{item.content}}"
+            />
+        </block>
+    </vx-card>
+</view>

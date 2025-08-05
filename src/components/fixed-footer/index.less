@@ -1,0 +1,28 @@
+@import 'themes';
+@import 'mixins';
+
+.@{vx-prefix}-fixed-footer {
+    &__placeholder {
+        height: 114rpx;
+    }
+
+    &__inner {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        height: 114rpx;
+        z-index: 9;
+        background-color: #ffffff;
+    }
+
+    &__actions {
+        display: flex;
+        padding: 18rpx 36rpx;
+        box-sizing: border-box;
+    }
+
+    &--is-iphonex &__inner,
+    &--is-iphonex &__placeholder {
+        padding-bottom: @safe-area-inset-bottom;
+    }
+}

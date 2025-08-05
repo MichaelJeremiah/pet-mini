@@ -1,0 +1,6 @@
+<view class="vx-class {{ ss.wrap }}">
+    <view class="{{ ss.hd }}" wx:if="{{ title }}">{{ title }}</view>
+    <view class="{{ ss.bd }}">
+        <slot></slot>
+    </view>
+</view>

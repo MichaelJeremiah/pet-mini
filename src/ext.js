@@ -1,0 +1,2 @@
+const extConfig = JSON.parse('{"env":"development","appVersion":"0.0.1","appName":"萌友圈","apiUrl":"http://api.antab.xyz/pet","wxApiUrl":"https://wxapit.cefang.cn","gApiUrl":"https://gapit.cefang.cn"}');
+export default extConfig;

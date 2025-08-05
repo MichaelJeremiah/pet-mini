@@ -1,0 +1,7 @@
+{
+    "navigationBarTitleText": "美容",
+    "usingComponents": {
+        "vx-card": "/components/card/index",
+        "biz-goods-card": "../components/goods-card/index"
+    }
+}

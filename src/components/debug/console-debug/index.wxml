@@ -1,0 +1,28 @@
+<wxs src="../../../wxs/filter.wxs" module="filter" />
+<view hidden="{{!visibleConsole}}" class="console-debug">
+    <view class="console-list">
+        <view class="console-part" wx:for="{{consoleData}}" wx:key="index">
+            <view class="console-part-header">
+                <view
+                    data-current="{{ {data: item, index } }}"
+                    catch:tap="handleFormatLog"
+                    class="console-part-header-btn"
+                >
+                    格式化
+                </view>
+            </view>
+            <view class="console-part-content console-part-content--{{item.type}}">
+                <view
+                    wx:if="{{item.isFormat}}"
+                    style="white-space: pre-wrap"
+                    data-log-item="{{item.value}}"
+                    bind:tap="handleCopyLogItem"
+                >{{item.formatValue}}</view>
+                <view wx:else data-log-item="{{item.value}}" bind:tap="handleCopyLogItem">
+                    {{filter.toJSON(item.value)}}
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="console-clear" bind:tap="handleClearAllData">清空</view>
+</view>

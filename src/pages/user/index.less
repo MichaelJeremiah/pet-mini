@@ -1,0 +1,83 @@
+@import 'themes';
+@import 'mixins';
+
+.container {
+    min-height: 100vh;
+    background: url('https://s2-1257336670.cos.ap-shanghai.myqcloud.com/images/l6ewnq-1670482202898-W750H562.png') no-repeat top center;
+    background-size: 100% auto;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20rpx 40rpx;
+
+    .userinfo {
+        &__name {
+            font-size: 42rpx;
+            font-weight: 500;
+            color: #fff;
+        }
+
+        &__intro {
+            font-size: 26rpx;
+            color: #ceced9;
+            margin-top: 6rpx;
+        }
+
+        &__follow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 120rpx;
+            height: 56rpx;
+            margin-top: 50rpx;
+            border-radius: 10rpx;
+            font-size: 24rpx;
+            color: @text-color-secondary;
+            background-color: @primary-color;
+
+            > image {
+                width: 16rpx;
+                height: 16rpx;
+                margin-right: 10rpx;
+                vertical-align: top;
+            }
+        }
+
+        &__avatar {
+            width: 160rpx;
+            height: 160rpx;
+            border-radius: 50%;
+            border: 6rpx solid rgba(255, 255, 255, 0.3);
+        }
+    }
+}
+
+.data {
+    display: flex;
+    align-items: center;
+    margin: 60rpx 30rpx;
+    height: 164rpx;
+    border-radius: 20rpx;
+    background-color: #fefffe;
+    box-shadow: 0 0rpx 24rpx 0 rgba(0, 0, 0, 0.1);
+
+    &-item {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &-label {
+        font-size: 24rpx;
+        color: #999;
+    }
+
+    &-value {
+        font-size: 34rpx;
+        font-weight: 600;
+        color: #262628;
+    }
+}

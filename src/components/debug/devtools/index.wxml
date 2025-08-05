@@ -1,0 +1,25 @@
+<vx-popup
+    safeArea
+    visible="{{ visible }}"
+    position="bottom"
+    title="开发工具"
+    closable="{{ true }}"
+    hasFooter="{{ false }}"
+    bind:close="handleHideLog"
+>
+    <view class="devtools__popup-tabs">
+        <block  wx:for="{{ tabItems }}" wx:key="index" >
+            <view 
+                class="devtools__popup-tab {{currentIndex===index ? 'devtools__popup-tab--active' : ''}}" 
+                data-index="{{index}}" 
+                bindtap="handleChangeTab"
+            >{{ item }}</view>
+        </block>
+    </view>
+    <view class="devtools__popup-body">
+        <network-debug visibleNetwork="{{ visible && currentIndex === 0 }}"/>
+        <storage-debug visibleStorage="{{ visible && currentIndex === 1 }}"/>
+        <store-debug visibleStore="{{ visible && currentIndex === 2 }}"/>
+        <console-debug visibleConsole="{{ visible && currentIndex === 3 }}"/>
+    </view>
+</vx-popup>

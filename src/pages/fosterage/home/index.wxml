@@ -1,0 +1,26 @@
+<vx-navbar title="寄养" />
+
+<view class="container">
+    <view class="banner-swiper">
+      <swiper indicator-dots autoplay circular indicator-color="#ffffff" indicator-active-color="#fccb30">
+        <block wx:for="{{banners}}" wx:key="index">
+          <swiper-item class="banner-swiper-item">
+            <image class="banner-swiper-img" src="{{item.url}}" mode="aspectFill" />
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+
+    <vx-card title="推荐门店">
+        <block wx:for="{{storeList}}" wx:key="index">
+            <biz-store-card
+                img="{{item.img}}"
+                name="{{item.name}}"
+                star="{{item.star}}"
+                address="{{item.address}}"
+                distance="{{item.distance}}"
+                bind:click="onStoreClick"
+            />
+        </block>
+    </vx-card>
+</view>

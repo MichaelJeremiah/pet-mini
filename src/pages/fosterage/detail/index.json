@@ -1,0 +1,7 @@
+{
+    "navigationBarTitleText": "",
+    "usingComponents": {
+        "vx-card": "/components/card/index",
+        "vx-rater": "/components/rater/index"
+    }
+}

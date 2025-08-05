@@ -1,0 +1,49 @@
+<wxs src="../../../wxs/filter.wxs" module="filter" />
+<view hidden="{{!visibleStorage}}" class="storage-debug">
+    <accordion-group>
+        <accordion
+            name="{{item.storageKey}}"
+            wx:for="{{storageData}}"
+            wx:key="index"
+        >
+            <view slot="header" class="storage-header">
+                <view class="storage-header-left">{{item.storageKey}}</view>
+                <view class="storage-header-right">
+                    <view
+                        wx:for="{{storageDataOperatingText}}"
+                        wx:key="idx"
+                        catch:tap="handleOperatingStorage"
+                        wx:for-item="storageItem"
+                        wx:for-index="idx"
+                        data-storage="{{ {...item, type: idx + 1 } }}"
+                        class="{{idx === 1 ? 'storage-header-btn--warning' : 'storage-header-btn' }}"
+                    >
+                        {{storageItem}}
+                    </view>
+                </view>
+            </view>
+            <view class="storage-part">
+                <view class="storage-part-header">
+                    <view
+                        data-currentstorage="{{ {data: item, index } }}"
+                        catch:tap="handleFormatStorage"
+                        class="storage-part-header-btn"
+                    >
+                        格式化
+                    </view>
+                </view>
+                <view class="storage-part-content">
+                    <view
+                        wx:if="{{item.isFormat}}"
+                        style="white-space: pre-wrap"
+                        data-storage-item="{{item.storageValue}}"
+                        bind:tap="handleCopyStorageItem"
+                    >{{item.formatStorageValue}}</view>
+                    <view wx:else data-storage-item="{{item.storageValue}}" bind:tap="handleCopyStorageItem">
+                        {{filter.toJSON(item.storageValue)}}
+                    </view>
+                </view>
+            </view>
+        </accordion>
+    </accordion-group>
+</view>

@@ -1,0 +1,45 @@
+<vx-navbar title="" />
+
+<view class="container">
+    <view class="search">
+        <view class="search-input">
+            <image class="search-input__icon" src="/images/icon_search.png" />
+            <input 
+                class="search-input__inner" 
+                placeholder="搜索你想要的" 
+                placeholder-style="color: #CCC8C8; font-size: 24rpx;"
+                bind:confirm="onConfirm"
+                bind:blur="onBlur"
+            />
+        </view>
+        <view class="search-btn" bind:tap="onSearch">搜索</view>
+    </view>
+
+    <view wx:if="{{caches.length > 0}}" class="card">
+        <view class="card-header">
+            <view class="card-title">历史搜索</view>
+            <view class="card-extra" bind:tap="onCleanCache">
+                <image src="/images/icon_trash.png" />
+            </view>
+        </view>
+        <view class="card-body">
+            <block wx:for="{{caches}}" wx:key="*this">
+                <view class="keyword">{{item}}</view>
+            </block>
+        </view>
+    </view>
+
+    <view class="card">
+        <view class="card-header">
+            <view class="card-title">热门搜索</view>
+            <view class="card-extra">
+            </view>
+        </view>
+        <view class="card-body">
+            <view class="keyword">巴哥犬</view>
+            <view class="keyword">狗狗</view>
+            <view class="keyword">拉布拉多</view>
+            <view class="keyword">牧羊犬</view>
+        </view>
+    </view>
+</view>

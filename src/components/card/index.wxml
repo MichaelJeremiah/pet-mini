@@ -1,0 +1,12 @@
+<view class="vx-class vx-card">
+    <view class="vx-card-header">
+        <view class="vx-card-title">{{title}}</view>
+        <view wx:if="{{moreText}}" class="vx-card-extra" bind:tap="onMoreClick">
+            <text>{{moreText}}</text>
+            <image src="/images/icon_arrow.png"/>
+        </view>
+    </view>
+    <view class="vx-card-body">
+        <slot></slot>
+    </view>
+</view>

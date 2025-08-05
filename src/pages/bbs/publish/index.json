@@ -1,0 +1,6 @@
+{
+    "navigationBarTitleText": "",
+    "usingComponents": {
+        "vx-fixed-footer": "/components/fixed-footer/index"
+    }
+}

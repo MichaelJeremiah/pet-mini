@@ -1,0 +1,7 @@
+<web-view wx:if="{{canIUse}}" bind:message="webMessage" src="{{url}}" />
+
+<view wx:else class="lowban">
+    <navigator url="/pages/index/index" open-type="reLaunch">
+        <button class="backbtn">返回首页</button>
+    </navigator>
+</view>

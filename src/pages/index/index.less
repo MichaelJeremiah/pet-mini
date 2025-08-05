@@ -1,0 +1,52 @@
+@import 'themes';
+@import 'mixins';
+
+.banner-swiper {
+    height: 330rpx;
+
+    > swiper {
+        height: 100%;
+    }
+
+    &-item {
+        padding: 0 10rpx;
+        box-sizing: border-box;
+    }
+
+    &-img {
+        width: 100%;
+        border-radius: 16rpx;
+        overflow: hidden;
+    }
+}
+
+.menu {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 30rpx;
+    margin: 40rpx 0;
+
+    &-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: @text-color-secondary;
+        font-size: 24rpx;
+
+        &-icon {
+            width: 100rpx;
+            height: 100rpx;
+            margin-bottom: 10rpx;
+        }
+    }
+}
+
+.doctor-list {
+    display: flex;
+    padding: 30rpx;
+}
+
+.doctor-item {
+    display: inline-block;
+}

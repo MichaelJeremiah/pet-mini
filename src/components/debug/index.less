@@ -1,0 +1,101 @@
+@import 'themes';
+@import 'mixins';
+
+.debug-button {
+    position: fixed;
+    z-index: 6000;
+    background-color: #07c160;
+    color: #ffffff;
+    text-align: center;
+    box-shadow: 0 0 8px #888888;
+    font-size: 24rpx;
+    border-radius: 3px;
+}
+
+.debug-line {
+    width: 110rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .debug-item {
+        flex: 1;
+        padding: 4rpx 0 10rpx;
+    }
+}
+
+.debug-top {
+    padding: 10rpx 10rpx 0;
+}
+
+.debug__popup-body {
+    padding: 0 !important;
+}
+
+.debug-box {
+    .header {
+        line-height: 100rpx;
+        text-align: center;
+        border-bottom: 1rpx solid #eeeeee;
+        font-weight: bold;
+        position: relative;
+
+        .close {
+            width: 100rpx;
+            height: 100rpx;
+            background: url(https://cdn.weipaitang.com/static/201905078ca348d6-431e-4542-9e4f-0824b6aa063d-W42H42)
+                center no-repeat;
+            background-size: 40rpx;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+    }
+
+    .body {
+        padding: 30rpx;
+
+        .item {
+            display: flex;
+            align-content: center;
+            align-items: center;
+            word-break: break-all;
+            padding: 10rpx 0;
+
+            .title {
+                color: #666666;
+                width: 150rpx;
+            }
+
+            .text {
+                flex: 1;
+                text-align: left;
+
+                .picker,
+                .input {
+                    border: 1rpx solid #eeeeee;
+                    padding: 10rpx 20rpx;
+                    border-radius: 5rpx;
+                }
+            }
+
+            .btn {
+                margin-left: 10rpx;
+                padding: 0 20rpx;
+            }
+        }
+    }
+
+    .btns {
+        padding: 0 30rpx 30rpx;
+        overflow: hidden;
+
+        .btn {
+            margin-right: 20rpx;
+            margin-bottom: 20rpx;
+            padding: 0 20rpx;
+            display: block;
+            float: left;
+        }
+    }
+}

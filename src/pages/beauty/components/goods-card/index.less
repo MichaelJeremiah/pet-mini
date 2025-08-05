@@ -1,0 +1,55 @@
+@import 'themes';
+@import 'mixins';
+
+.goods-card {
+    position: relative;
+    display: flex;
+    padding: 30rpx;
+
+    &::after {
+        .setBottomLine(#ececec);
+        left: 30rpx;
+        right: 30rpx;
+    }
+
+    &-img {
+        width: 180rpx;
+        height: 180rpx;
+        border-radius: 8rpx;
+        overflow: hidden;
+    }
+
+    &-content {
+        padding-left: 24rpx;
+    }
+
+    &-name {
+        font-size: 32rpx;
+        font-weight: 500;
+        color: @text-color;
+        line-height: 48rpx;
+    }
+
+    &-desc {
+        font-size: 28rpx;
+        color: #999;
+        line-height: 48rpx;
+    }
+
+    &-price {
+        position: relative;
+        font-size: 36rpx;
+        font-weight: 500;
+        color: #ff4646;
+        padding-left: 20rpx;
+        margin-top: 30rpx;
+
+        &::before {
+            content: '¥';
+            position: absolute;
+            bottom: 6rpx;
+            left: 0;
+            font-size: 24rpx;
+        }
+    }
+}

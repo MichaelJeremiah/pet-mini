@@ -1,0 +1,7 @@
+<view class="vx-class {{ ss.wrap }}" style="height: {{ fontSize }}rpx" bindtouchmove="onTouchMove">
+    <block wx:for="{{ stars }}" wx:key="index">
+        <view class="{{ ss.star }}" bindtap="onTap" data-index="{{ index }}" style="width: {{ fontSize }}rpx; height: {{ fontSize }}rpx; margin: 0 {{ margin }}rpx">
+            <image class="{{ ss.icon }}" style="width: {{ fontSize }}rpx; height: {{ fontSize }}rpx;" src="/images/icon_star{{colors[index] ? '_fill' : ''}}.png"/>
+        </view>
+    </block>
+</view>

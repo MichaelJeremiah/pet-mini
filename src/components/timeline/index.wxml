@@ -1,0 +1,3 @@
+<view class="vx-class {{ prefixCls }}">
+    <slot></slot>
+</view>

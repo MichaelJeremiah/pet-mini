@@ -1,0 +1,13 @@
+<vx-navbar title="用户评价" />
+
+<view class="container">
+    <block wx:for="{{commentList}}" wx:key="index">
+        <biz-comment-card
+            user="{{item.user}}"
+            star="{{item.star}}"
+            date="{{item.date}}"
+            imgs="{{item.imgs}}"
+            content="{{item.content}}"
+        />
+    </block>
+</view>

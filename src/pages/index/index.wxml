@@ -1,0 +1,55 @@
+<vx-navbar/>
+
+<view class="container">
+    <view class="banner-swiper">
+      <swiper indicator-dots autoplay circular indicator-color="#ffffff" indicator-active-color="#fccb30" previous-margin="30rpx" next-margin="30rpx">
+        <block wx:for="{{banners}}" wx:key="index">
+          <swiper-item class="banner-swiper-item">
+            <image class="banner-swiper-img" src="{{item.url}}" mode="aspectFill" />
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+
+    <view class="menu">
+        <navigator class="menu-item" target="self" url="/pages/fosterage/home/index" hover-class="navigator-hover" open-type="navigate">
+            <image class="menu-item-icon" src="/images/menu_1.png" />
+            <text>我要寄养</text>
+        </navigator>
+        <navigator class="menu-item" target="self" url="/pages/beauty/home/index" hover-class="navigator-hover" open-type="navigate">
+            <image class="menu-item-icon" src="/images/menu_2.png" />
+            <text>宠物美容</text>
+        </navigator>
+        <navigator class="menu-item" target="self" url="/pages/medical/home/index" hover-class="navigator-hover" open-type="navigate">
+            <image class="menu-item-icon" src="/images/menu_3.png" />
+            <text>宠物医疗</text>
+        </navigator>
+        <navigator class="menu-item" target="self" url="/pages/wiki/home/index" hover-class="navigator-hover" open-type="navigate">
+            <image class="menu-item-icon" src="/images/menu_4.png" />
+            <text>知识百科</text>
+        </navigator>
+    </view>
+
+    <vx-card title="每日推荐" moreText="查看全部" moreLink="/pages/bbs/index" openType="switchTab">
+        <block wx:for="{{postList}}" wx:key="index">
+            <biz-post-card user="{{item.user}}" bind:click="onPostClick"/>
+        </block>
+    </vx-card>
+
+    <vx-card title="热门宠物护理师">
+        <scroll-view scroll-x="true" scroll-y="false" upper-threshold="50" lower-threshold="50" >
+            <view class="doctor-list" style="width: {{ 192 * doctorList.length }}rpx">
+                <block wx:for="{{doctorList}}" wx:key="index" >
+                    <biz-doctor-card
+                        class="doctor-item"
+                        avatar="{{item.avatar}}"
+                        name="{{item.name}}"
+                        position="{{item.position}}"
+                        workage="{{item.workage}}"
+                        bind:click="onDoctorClick"
+                    />
+                </block>
+            </view>
+        </scroll-view>
+    </vx-card>
+</view>

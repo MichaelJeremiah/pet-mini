@@ -1,0 +1,19 @@
+<view class="store-card" bind:tap="onTap">
+    <image 
+        class="store-card-img" 
+        src="{{img}}" 
+        mode="aspectFill"
+    />
+
+    <view class="store-card-content">
+        <view class="store-card-name">{{name}}</view>
+        <view class="store-card-star">
+            <vx-rater controlled value="{{star}}"/>
+        </view>
+        <view class="store-card-address">{{address}}</view>
+        <view class="store-card-distance">
+            <image class="store-card-distance__icon" src="/images/icon_location.png"/>
+            <text>{{distance}}</text>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,79 @@
+<block wx:if="{{showDebug}}">
+    <view
+        class="debug-button"
+        style="top: {{nodePosition.top}}px;left: {{nodePosition.left}}px;"
+        catch:touchmove="handleTouchMove"
+    >
+        <view class="debug-top" bind:tap="handleShowDebugTool">{{ extConfig.env === 'production' ? '正式' : '测试' }}</view>
+        <view class="debug-line">
+            <view class="debug-item" bind:tap="handleShowDebugTool">设置</view>
+            <view class="debug-item" catch:tap="handleShowLog">Log</view>
+        </view>
+    </view>
+
+    <vx-popup 
+        safeArea
+        vx-content-class="debug__popup"
+        vx-body-class="debug__popup-body"
+        visible="{{ visible }}"
+        position="bottom"
+        title="小绿点工具"
+        closable="{{ true }}"
+        hasFooter="{{ false }}"
+        bind:close="handleHideDebugTool"
+    >
+        <view class="debug-box">
+            <view class="body">
+                <view class="item">
+                    <view class="title">当前版本：</view>
+                    <view class="text">{{extConfig.appName}}（{{extConfig.appVersion}} - {{accountInfo.envVersion}}）</view>
+                </view>
+                <view class="item" bind:tap="handleCopyCurrentPath">
+                    <view class="title">当前路径：</view>
+                    <view class="text">{{currentPath}}</view>
+                </view>
+                <view class="item">
+                    <view class="text">
+                        <input
+                            class="input"
+                            bindinput="onInputUrl"
+                            maxlength="-1"
+                            placeholder="请输入网页地址"
+                            type="text"
+                        />
+                    </view>
+                    <button class="btn" plain="true" type="primary" size="mini" bind:tap="handleOpenUrl">
+                        打开地址
+                    </button>
+                </view>
+            </view>
+            <view class="btns">
+                <button class="btn" plain="true" type="primary" size="mini" bind:tap="handleCopyCurrentPath">
+                    复制路径
+                </button>
+                <button class="btn" plain="true" type="primary" size="mini" bind:tap="handleReloadPage">
+                    刷新页面
+                </button>
+                <button class="btn" plain="true" type="primary" size="mini" bind:tap="handleClearStorage">
+                    清除缓存
+                </button>
+                <button class="btn" plain="true" type="primary" size="mini" bind:tap="handleSystemInfo">
+                    系统信息
+                </button>
+                <button class="btn" plain="true" type="primary" size="mini" bind:tap="handleEnableDebug">
+                    {{ enableDebug ? '关闭' : '打开' }}调试
+                </button>
+                <button class="btn" plain="true" type="primary" size="mini" bind:tap="handleCopyExtConfig">
+                    复制extConfig
+                </button>
+                <button class="btn" plain="true" type="primary" size="mini" bind:tap="handleShowLog">
+                    Log信息
+                </button>
+            </view>
+        </view>
+    </vx-popup>
+
+    <devtools visible="{{ visibleLog }}"/>
+
+    <system-info visible="{{ visibleSystemInfo }}"/>
+</block>

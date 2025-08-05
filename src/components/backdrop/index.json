@@ -1,0 +1,6 @@
+{
+    "component": true,
+    "usingComponents": {
+        "vx-animation-group": "../animation-group/index"
+    }
+}

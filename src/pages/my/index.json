@@ -1,0 +1,6 @@
+{
+    "navigationBarTitleText": "",
+    "usingComponents": {
+        "vx-navbar-fake": "/components/navbar-fake/index"
+    }
+}

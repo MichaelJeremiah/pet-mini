@@ -1,0 +1,29 @@
+<vx-navbar title="百科" />
+
+<view class="container">
+    <vx-sticky offsetTop="{{ navbarHeight }}">
+        <vx-tabs controlled scroll current="{{current}}" bind:change="onTabsChange">
+            <vx-tab wx:for="{{tabList}}" wx:key="index" key="{{item.key}}" title="{{item.title}}" />
+        </vx-tabs>
+    </vx-sticky>
+
+    <view class="article-list">
+        <view class="article-left" id="leftList">
+            <block wx:for="{{leftList}}" wx:key="index">
+                <biz-article-card
+                    img="{{item.img}}"
+                    bind:click="onArticleClick"
+                />
+            </block>
+        </view>
+
+        <view class="article-right" id="rightList">
+            <block wx:for="{{rightList}}" wx:key="index">
+                <biz-article-card
+                    img="{{item.img}}"
+                    bind:click="onArticleClick"
+                />
+            </block>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,16 @@
+<view class="vx-class {{ ss.wrap }}">
+    <view class="{{ ss.placeholder }}" style="padding-top: {{ statusBarHeight }}px" />
+    <view class="{{ ss.inner }}" style="padding-top: {{ statusBarHeight }}px; background-color: {{ background }}; color: {{ color }}; width: {{ innerWidth }}px; padding-right: {{ sideWidth }}px;">
+        <view class="{{ ss.left }}" bind:tap="onPublishClick">
+            <image src="/images/icon_camera.png"/>
+        </view>
+        <view class="{{ ss.center }}" bind:tap="onSearchClick">
+            <view class="search-input">
+                <image class="search-icon" src="/images/icon_search.png"/>
+                <view class="search-placeholder">搜索你想要的</view>
+            </view>
+        </view>
+        <view class="{{ ss.right }}"></view>
+    </view>
+</view>
+<vx-debug />

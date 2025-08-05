@@ -1,0 +1,8 @@
+<view class="doctor-card" bind:tap="onTap">
+    <image class="doctor-card-avatar" src="{{avatar}}" mode="aspectFill"/>
+    <view class="doctor-card-content">
+        <view class="doctor-card-name">{{name}}</view>
+        <view class="doctor-card-position">{{position}}</view>
+        <view class="doctor-card-workage">{{workage}}</view>
+    </view>
+</view>

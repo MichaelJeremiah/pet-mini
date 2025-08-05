@@ -1,0 +1,57 @@
+<vx-navbar title="医师详情" />
+
+<view class="container">
+    <view class="header">
+        <image class="header-avatar" src="" mode="aspectFill"/>
+        <view class="header-name">朱小亮</view>
+        <view class="header-intro">专家医师 | 经理 | 15年从业经验</view>
+    </view>
+
+    <view class="intro">
+        <view class="intro-title">医师简介</view>
+        <view class="intro-content">从事宠物行业四年多，因为热爱而选择，我会不懈努力提升自己，为自己喜爱的宠物行业风险热血青春，为可爱的毛孩子们提供更加专业，更加安全的服务。</view>
+        <view class="intro-tags">
+            <view class="intro-tag">专业</view>
+            <view class="intro-tag">细心</view>
+        </view>
+    </view>
+
+    <vx-card title="作品">
+        <scroll-view scroll-x="true" scroll-y="false">
+            <view class="work-list" style="width: {{ 266 * 3 - 16 }}rpx">
+                <view class="work-item">
+                    <image class="work-img" src="https://s2-1257336670.cos.ap-shanghai.myqcloud.com/images/gnntqy-1670300109330-W110H90.png" mode="aspectFill"/>
+                    <view class="work-name">小型犬洗澡</view>
+                </view>
+                <view class="work-item">
+                    <image class="work-img" src="https://s2-1257336670.cos.ap-shanghai.myqcloud.com/images/gnntqy-1670300109330-W110H90.png" mode="aspectFill"/>
+                    <view class="work-name">犬类洁牙洁白</view>
+                </view>
+                <view class="work-item">
+                    <image class="work-img" src="https://s2-1257336670.cos.ap-shanghai.myqcloud.com/images/gnntqy-1670300109330-W110H90.png" mode="aspectFill"/>
+                    <view class="work-name">中型犬抗菌药浴</view>
+                </view>
+            </view>
+        </scroll-view>
+    </vx-card>
+
+    <view class="vx-split-line"></view>
+    <vx-card title="所在商户">
+        <view class="store">
+            <image class="store-img" src="https://s2-1257336670.cos.ap-shanghai.myqcloud.com/images/gnntqy-1670300109330-W110H90.png" mode="aspectFill"/>
+            <view class="store-content">
+                <view class="store-name">纳比米勒动物医院(朝阳门店)</view>
+                <vx-rater controlled value="{{4}}"/>
+                <view class="store-other">
+                    <view>人均 ¥336/人</view>
+                    <view>> 21km</view>
+                </view>
+            </view>
+        </view>
+    </vx-card>
+
+    <view class="vx-split-line"></view>
+    <vx-card title="热门评论">
+
+    </vx-card>
+</view>

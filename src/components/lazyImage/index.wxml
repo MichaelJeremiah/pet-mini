@@ -1,0 +1,5 @@
+<view class="vx-class vx-lazy-image {{autoHeight?'autoHeight':''}}" style="{{color ? ('background:'+ color +';') : ''}}">
+    <image class="img-{{classKey}} vx-lazy-image__inner {{readerImg ? 'vx-lazy-image--show' : 'vx-lazy-image--hide'}} {{autoHeight?'autoHeight':''}}" style="{{autoHeight? 'background-image: url(' + imgSrc + '); padding-top: '+ paddingTop +';' : ''}}" src="{{showImg ? imgSrc : ''}}" mode="{{imgMode}}" bind:load="bindload" bind:error="binderror">
+        <slot />
+    </image>
+</view>

@@ -1,0 +1,79 @@
+@import 'themes';
+@import 'mixins';
+
+.button(@theme, @bg-color, @border-color, @active-bg-color, @color) {
+    &--@{theme},
+    &--@{theme}--disabled {
+        .button-style(@bg-color, @color);
+    }
+
+    &--@{theme}&--hover {
+        .button-hover(@active-bg-color, @color);
+    }
+
+    &--@{theme}&--outline,
+    &--@{theme}&--outline&--disabled {
+        .button-outline(@bg-color);
+    }
+
+    &--@{theme}&--outline&--hover {
+        .button-hover(@bg-color, #fff);
+    }
+}
+
+.@{vx-prefix}-button {
+    .button-reset();
+    position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0 @button-padding-base;
+    border: none;
+    border-radius: @button-border-radius;
+    vertical-align: middle;
+    text-align: center;
+    text-overflow: ellipsis;
+    cursor: pointer;
+    // 按钮尺寸
+    &--default {
+        font-size: @button-font-size-base;
+        line-height: @button-height-base - 2px;
+    }
+
+    &--small {
+        line-height: @button-height-small - 2px;
+        font-size: @button-font-size-small;
+    }
+
+    &::after {
+        content: ' ';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: -6px;
+        right: -6px;
+        bottom: -6px;
+        left: -6px;
+        border: none;
+        transform: none;
+        transform-origin: 0 0;
+        box-sizing: border-box;
+        border-radius: 0;
+    }
+
+    &--bordered {
+        border: 1px solid transparent;
+    }
+
+    &--round {
+        border-radius: (@button-height-base / 2);
+    }
+
+    &--disabled {
+        opacity: @button-opacity-disabled !important;
+    }
+
+    .button(primary, #D30F17, #D30F17, #D30F17, #ffffff);
+    .button(warn, #F79B43, #F79B43, #F79B43, #ffffff);
+    .button(disable, #bfbfbf,  #bfbfbf,  #bfbfbf, #ffffff);
+}

@@ -1,0 +1,8 @@
+<view class="vx-class {{ ss.wrap }}">
+    <view class="{{ ss.placeholder }}" style="height: {{ height }}rpx;">
+        <view class="{{ ss.safearea }}"/>
+    </view>
+    <view style="bottom:{{ bottom }}rpx; height: {{ height }}rpx" class="{{ ss.inner }}">
+        <view class="{{ ss.actions }}"><slot></slot></view>
+    </view>
+</view>

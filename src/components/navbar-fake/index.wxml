@@ -1,0 +1,5 @@
+<view class="vx-class {{ ss.wrap }}">
+    <view class="{{ ss.placeholder }}" style="padding-top: {{ statusBarHeight }}px" />
+    <view class="{{ ss.inner }}" style="padding-top: {{ statusBarHeight }}px; width: {{ innerWidth }}px; padding-right: {{ sideWidth }}px;">
+    </view>
+</view>

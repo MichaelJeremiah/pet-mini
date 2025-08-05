@@ -1,0 +1,1 @@
+<vx-animation-group vx-class="vx-class {{ ss.wrap }}" in="{{ in }}" classNames="{{ classNames }}" bind:click="onClick" wrapStyle="{{ { zIndex } }}" disableScroll />

@@ -1,0 +1,37 @@
+<bbs-navbar />
+
+<view class="tab">
+    <view class="tab-item {{ activeTab === '0' && 'is-active' }}" data-key="0" bind:tap="onTabClick">关注</view>
+    <view class="tab-item {{ activeTab === '1' && 'is-active' }}" data-key="1" bind:tap="onTabClick">推荐</view>
+</view>
+
+<scroll-view wx:if="{{activeTab === '0'}}" class="follow" scroll-x="true" scroll-y="false">
+    <view class="follow-list" style="width: {{128 * followList.length - 24}}rpx">
+        <block wx:for="{{followList}}" wx:key="index">
+            <view class="follow-item" bind:tap="onUserClick">
+                <image src="{{item.avatar}}" mode="aspectFill" />
+            </view>
+        </block>
+    </view> 
+</scroll-view>
+
+<scroll-view wx:if="{{activeTab === '1'}}" class="recommend" scroll-x="true" scroll-y="false">
+    <view class="recommend-list" style="width: {{264 * recommendList.length - 24}}rpx">
+        <block wx:for="{{recommendList}}" wx:key="index">
+            <view class="recommend-item" bind:tap="onUserClick">
+                <image class="recommend-item__avatar" src="{{item.avatar}}" mode="aspectFill" />
+                <view class="recommend-item__name">{{item.name}}</view>
+                <view class="recommend-item__intro">{{item.intro}}</view>
+                <view class="recommend-item__follow" catch:tap>
+                    <image src="/images/icon_follow.png"/>
+                    <text>关注</text>
+                </view>
+            </view>
+        </block>
+    </view> 
+</scroll-view>
+  
+
+<block wx:for="{{postList}}" wx:key="index">
+    <biz-post-card user="{{item.user}}" bind:click="onPostClick"/>
+</block>

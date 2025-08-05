@@ -1,0 +1,26 @@
+@import "themes";
+@import "mixins";
+
+.@{vx-prefix}-accordion-group {
+    position: relative;
+    border: none;
+
+    &__hd {
+        padding: 30rpx 30rpx 18rpx;
+        font-size: @font-size-base;
+        color: @text-color-secondary;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    &__bd {
+        position: relative;
+        background-color: #ffffff;
+
+        &::after {
+            // .hairline(@border-color-split);
+            border-top-width: @border-width-base;
+            border-bottom-width: @border-width-base;
+        }
+    }
+}

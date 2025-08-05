@@ -1,0 +1,29 @@
+@import "themes";
+@import "mixins";
+
+.@{vx-prefix}-tabs {
+    display: flex;
+    width: 100%;
+    height: @tabs-height;
+    line-height: 72rpx;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 1;
+    justify-content: space-around;
+    align-items: center;
+    background: @tabs-bg;
+
+    &--scroll {
+        display: block;
+        overflow: auto;
+        white-space: nowrap;
+    }
+
+    &--vertical {
+        display: inline-flex;
+        width: auto;
+        height: auto;
+        max-height: @tabs-vertical-height;
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "navigationBarTitleText": "",
+    "usingComponents": {
+        "vx-navbar-fake": "/components/navbar-fake/index",
+        "vx-card": "/components/card/index",
+        "biz-post-card": "/components/post-card/index"
+    }
+}

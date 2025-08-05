@@ -1,0 +1,23 @@
+<view class="comment-card">
+    <view class="comment-card-header">
+        <view class="comment-card-user">
+            <image 
+                class="comment-card-user__avatar" 
+                src="{{user.avatar}}"
+                mode="aspectFill"
+            />
+            <view class="comment-card-user__content">
+                <view class="comment-card-user__nickname">{{user.nickname}}</view>
+                <vx-rater class="comment-card-user__rater" controlled value="{{star}}" fontSize="{{20}}"/>
+            </view>
+        </view>
+
+        <view class="comment-card-date">{{date}}</view>
+    </view>
+    <view wx:if="{{imgs.length > 0}}" class="comment-card-imgs">
+        <block wx:for="{{imgs}}" wx:key="*this">
+            <image src="{{item}}" mode="aspectFill"/>
+        </block>
+    </view>
+    <view class="comment-card-txt">{{content}}</view>
+</view>

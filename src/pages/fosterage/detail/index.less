@@ -1,0 +1,84 @@
+@import 'themes';
+@import 'mixins';
+
+.banner {
+    width: 100%;
+    height: 560rpx;
+    vertical-align: middle;
+}
+
+.container {
+    position: relative;
+    top: -24rpx;
+    background-color: #fff;
+    border-top-left-radius: 24rpx;
+    border-top-right-radius: 24rpx;
+}
+
+.info {
+    padding: 40rpx 30rpx;
+
+    &-title {
+        font-size: 36rpx;
+        font-weight: 500;
+        color: @text-color;
+    }
+
+    &-address {
+        display: flex;
+        align-items: center;
+        font-size: 24rpx;
+        color: #999;
+        line-height: 36rpx;
+        margin-top: 12rpx;
+
+        &__icon {
+            width: 20rpx;
+            height: 24rpx;
+            margin-right: 10rpx;
+        }
+    }
+
+    &-content {
+        display: flex;
+        align-items: center;
+        height: 152rpx;
+        background-color: #f8f8f8;
+        border-radius: 20rpx;
+        margin-top: 30rpx;
+
+        &-item {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            line-height: 40rpx;
+        }
+
+        &-label {
+            font-size: 24rpx;
+            color: #999;
+        }
+
+        &-value {
+            font-size: 28rpx;
+            font-weight: 500;
+            color: @text-color-secondary
+        }
+    }
+}
+
+.service {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30rpx;
+    height: 56rpx;
+    font-size: 28rpx;
+    color: #999;
+
+    &-list {
+        padding-top: 10rpx;
+        padding-bottom: 30rpx;
+    }
+}

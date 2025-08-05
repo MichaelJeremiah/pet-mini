@@ -1,0 +1,22 @@
+<view style="{{ style }}" bindtouchstart="onTouchStart" catchtouchmove="{{ refreshing || loading ? 'noop' : '' }}" capture-bind:touchmove="onTouchMove" bindtouchend="onTouchEnd">
+    <view class="{{ ss.wrap }}">
+        <view class="{{ ss.content }}">
+            <view class="{{ ss.iconPulling }}">
+                <text class="{{ ss.pIcon }}"></text>
+            </view>
+            <view class="{{ ss.textPulling }}">{{ active ? pullReadyText : pullingText }}</view>
+            <view class="{{ ss.iconRefreshing }}">
+                <text class="{{ ss.rIcon }}"></text>
+            </view>
+            <view class="{{ ss.textRefreshing }}">{{ refreshingText }}</view>
+        </view>
+    </view>
+    <slot></slot>
+    <view class="{{ ss.lWrap }}">
+        <view class="{{ ss.lContent }}">
+            <text wx:if="{{ !noData }}" class="{{ ss.rIcon }}"></text>
+            <text class="{{ ss.loadingText }}" wx:if="{{ !noData && isShowLoadingText }}">{{ loadingText }}</text>
+            <view wx:if="{{ noData }}">{{ loadNoDataText }}</view>
+        </view>
+    </view>
+</view>

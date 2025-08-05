@@ -1,0 +1,99 @@
+// The prefix to use on all css classes from wx.
+@vx-prefix: vx;
+
+@white: #fff;
+@black: #000;
+
+@primary-color: #fccb30;
+
+@text-color: #08090a;
+@text-color-secondary: #3a3b3c;
+@text-color-inverse: @white;
+@heading-color: fade(@black, 85%);
+@heading-color-dark: fade(@white, 100%);
+@text-color-dark: fade(@white, 85%);
+@text-color-secondary-dark: fade(@white, 65%);
+@font-variant-base: tabular-nums;
+@font-feature-settings-base: 'tnum';
+@font-size-base: 28rpx;
+@font-size-lg: 30rpx;
+@font-size-sm: 24rpx;
+@line-height-base: 1.5;
+@line-height-lg: 2;
+@line-height-sm: 1;
+@border-radius-base: 4px;
+@border-radius-lg: 6px;
+@border-radius-sm: 2px;
+
+// SafeArea
+@safe-area-inset-top: 44px;
+@safe-area-inset-right: 0;
+@safe-area-inset-bottom: 34px;
+@safe-area-inset-left: 0;
+
+// Backdrop
+@backdrop-background: fade(@black, 40%);
+@backdrop-background-inverse: transparent;
+
+// Border color
+@border-color-base: #e3e3e3; // base border outline a component
+@border-color-split: #f7f7f7; // split border inside a component
+@border-color-inverse: @white;
+@border-width-base: 1px; // width of the border for a component
+@border-style-base: solid; // style of a components border
+
+// Buttons
+@button-border-radius: @border-radius-base;
+@button-block-margin: 10px;
+@button-opacity-hover: 0.3;
+@button-opacity-disabled: 0.4;
+@button-default-border: transparent;
+@button-font-size-base: @font-size-lg;
+@button-font-size-small: @font-size-sm;
+@button-height-base: 76rpx;
+@button-height-small: 54rpx;
+@button-padding-base: 12px;
+
+// Tabbar
+@tabbar-height: 48px;
+@tabbar-bg: #ffffff;
+@tabbar-font-size: @font-size-sm;
+@tabbar-default-color: #80848f;
+
+// Popup
+@popup-width: 80%;
+@popup-max-width: 100%;
+@popup-hd-padding: 16rpx 0;
+@popup-bd-padding: 0 1.6em 0.8em;
+@popup-bd-font-size: 28rpx;
+@popup-title-font-size: 32rpx;
+@popup-content-bg: #ffffff;
+
+// Accordion
+@accordion-color: @black;
+@accordion-bg: #ffffff;
+@accordion-icon-size: 40rpx;
+@accordion-hd-padding: 20rpx 30rpx;
+@accordion-hd-padding-extra: 60rpx;
+@accordion-bd-padding: 30rpx;
+
+// Timeline
+@timeline-font-size: @font-size-base;
+@timeline-width: 2rpx;
+@timeline-color: #c7c8c9;
+@timeline-dot-color: #c7c8c9;
+@timeline-dot-size: 20rpx;
+
+// Tabs
+@tabs-font-size: 26rpx;
+@tabs-color: #999;
+@tabs-height: 88rpx;
+@tabs-bg: #ffffff;
+@tabs-vertical-height: 540rpx;
+@tabs-scrolling-size: 30rpx;
+@tabs-bar-size: 4rpx;
+
+// Z-Indexes
+@z-index-backdrop: 1000;
+@z-index-popup: 1000;
+@z-index-filterbar: 1001;

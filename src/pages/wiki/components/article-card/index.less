@@ -1,0 +1,58 @@
+@import "themes";
+@import "mixins";
+
+.article-card {
+    width: 352rpx;
+    border-radius: 10rpx;
+    background-color: #fff;
+    overflow: hidden;
+    margin-bottom: 16rpx;
+
+    &-img {
+        vertical-align: top;
+    }
+
+    &-content {
+        padding: 16rpx 20rpx;
+    }
+
+    &-title {
+        font-size: 26rpx;
+        color: @text-color-secondary;
+        line-height: 40rpx;
+    }
+
+    &-other {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 12rpx;
+    }
+
+    &-user {
+        display: flex;
+        align-items: center;
+        font-size: 20rpx;
+        color: #999;
+
+        > image {
+            width: 34rpx;
+            height: 34rpx;
+            border-radius: 50%;
+            margin-right: 10rpx;
+        }
+    }
+
+    &-view {
+        display: flex;
+        align-items: center;
+        font-size: 24rpx;
+        color: #999;
+
+        > image {
+            width: 26rpx;
+            height: 20rpx;
+            margin-right: 10rpx;
+        }
+    }
+}

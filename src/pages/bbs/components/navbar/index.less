@@ -1,0 +1,78 @@
+@import 'themes';
+@import 'mixins';
+
+.@{vx-prefix}-navbar {
+    &__placeholder {
+        height: 45px;
+    }
+
+    &__inner {
+        position: relative;
+        z-index: 999;
+        display: flex;
+        align-items: center;
+        height: 45px;
+        background-color: #fff;
+        color: #444;
+    }
+
+    &__left {
+        padding-left: 16px;
+        padding-right: 16px;
+        box-sizing: border-box;
+
+        > image {
+            width: 48rpx;
+            height: 48rpx;
+        }
+    }
+
+    &__left,
+    &__center {
+        display: flex;
+        align-items: center;
+        height: 100%;
+    }
+
+    &__center {
+        flex: 1;
+        justify-content: center;
+        font-size: 16px;
+        font-weight: 500;
+        white-space: nowrap;
+        padding-right: 16px;
+
+        .search-input {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            background-color: #f7f7f7;
+            border: 1px solid #f2f2f2;
+            border-radius: 10rpx;
+            padding: 0 28rpx;
+            height: 72rpx;
+        }
+
+        .search-icon {
+            width: 28rpx;
+            height: 28rpx;
+        }
+
+        .search-placeholder {
+            font-size: 24rpx;
+            color: #ccc8c8;
+            margin-left: 20rpx;
+        }
+    }
+
+    &--fixed &__inner {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    &--virtual &__placeholder {
+        display: none;
+    }
+}

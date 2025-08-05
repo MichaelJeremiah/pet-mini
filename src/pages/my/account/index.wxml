@@ -1,0 +1,37 @@
+<vx-navbar title="账户设置" />
+
+<view class="container">
+    <view class="cell">
+        <view class="cell-label">头像</view>
+        <view class="cell-value">
+            <image class="user-avatar" src="{{userinfo.avatar}}" mode="aspectFill"/>
+        </view>
+        <image class="cell-arrow" src="/images/icon_arrow.png" />
+    </view>
+    <view class="cell">
+        <view class="cell-label">昵称</view>
+        <view class="cell-value">
+            <input class="cell-input" model:value="{{userinfo.nickname}}"/>
+        </view>
+    </view>
+    <view class="cell">
+        <view class="cell-label">个性签名</view>
+        <view class="cell-value">
+            <input class="cell-input" model:value="{{userinfo.desc}}"/>
+        </view>
+    </view>
+    <view class="cell">
+        <view class="cell-label">ID</view>
+        <view class="cell-value cell-value--disabled">{{userinfo.uid}}</view>
+    </view>
+    <view class="cell">
+        <view class="cell-label">联系电话</view>
+        <view class="cell-value">
+            {{userinfo.phone}}
+        </view>
+    </view>
+
+    <vx-fixed-footer>
+        <view class="button">保存</view>
+    </vx-fixed-footer>
+</view>

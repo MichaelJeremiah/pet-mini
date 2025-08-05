@@ -1,0 +1,22 @@
+appid: 'wx0653a286f270cbd5'
+projectname: 'pet-mini'
+
+baseConfig:
+    extEnable: false
+    directCommit: false
+
+extConfig:
+    test:
+        env: 'development'
+        appVersion: '0.0.1'
+        appName: '萌友圈'
+        apiUrl: 'http://api.antab.xyz/pet'
+        wxApiUrl: 'https://wxapit.cefang.cn'
+        gApiUrl: 'https://gapit.cefang.cn'
+    prod:
+        env: 'production'
+        appVersion: '0.0.1'
+        appName: '萌友圈'
+        apiUrl: 'http://api.antab.xyz/pet'
+        wxApiUrl: 'https://wxapi.cefang.cn'
+        gApiUrl: 'https://gapi.cefang.cn'

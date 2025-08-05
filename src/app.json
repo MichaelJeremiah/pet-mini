@@ -1,0 +1,86 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/bbs/index",
+        "pages/my/index",
+        "pages/bbs/detail/index",
+        "pages/bbs/publish/index",
+        "pages/bbs/search/index",
+        "pages/my/account/index",
+        "pages/user/index"
+    ],
+    "subpackages": [
+        {
+            "root": "pages/fosterage",
+            "pages": ["home/index", "detail/index"]
+        },
+        {
+            "root": "pages/beauty",
+            "pages": ["home/index", "detail/index"]
+        },
+        {
+            "root": "pages/medical",
+            "pages": ["home/index", "detail/index", "evaluate/index", "doctor/index"]
+        },
+        {
+            "root": "pages/wiki",
+            "pages": ["home/index", "detail/index"]
+        },
+        {
+            "root": "pages/webview",
+            "pages": ["index"]
+        }
+    ],
+    "window": {
+        "backgroundTextStyle": "dark",
+        "backgroundColor": "#ffffff",
+        "navigationStyle": "custom",
+        "navigationBarBackgroundColor": "#ffffff",
+        "navigationBarTitleText": "萌友圈",
+        "navigationBarTextStyle": "black"
+    },
+    "tabBar": {
+        "color": "#666666",
+        "selectedColor": "#08090A",
+        "backgroundColor": "#ffffff",
+        "position": "bottom",
+        "borderStyle": "white",
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "text": "首页",
+                "iconPath": "images/tab_home.png",
+                "selectedIconPath": "images/tab_home_selected.png"
+            },
+            {
+                "pagePath": "pages/bbs/index",
+                "text": "萌友圈",
+                "iconPath": "images/tab_bbs.png",
+                "selectedIconPath": "images/tab_bbs_selected.png"
+            },
+            {
+                "pagePath": "pages/my/index",
+                "text": "我的",
+                "iconPath": "images/tab_my.png",
+                "selectedIconPath": "images/tab_my_selected.png"
+            }
+        ]
+    },
+    "permission": {
+        "scope.userLocation": {
+            "desc": "你的位置信息将用于推荐提货地址"
+        }
+    },
+    "usingComponents": {
+        "vx-debug": "/components/debug/index",
+        "vx-button": "/components/button/index",
+        "vx-navbar": "/components/navbar/index",
+        "vx-empty": "/components/empty/index",
+        "vx-copyright": "/components/copyright/index",
+        "vx-popup": "/components/popup/index",
+        "vx-refresher": "/components/refresher/index",
+        "vx-lazy-image": "/components/lazyImage/index",
+        "get-user-profile": "/components/get-user-profile/index"
+    },
+    "sitemapLocation": "sitemap.json"
+}

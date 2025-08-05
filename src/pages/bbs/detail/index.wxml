@@ -1,0 +1,37 @@
+<vx-navbar title="详情" />
+
+<view class="container">
+    <view class="post">
+        <view class="post-header">
+            <view class="post-user">
+                <image 
+                    class="post-user__avatar" 
+                    src="{{user.avatar}}"
+                    mode="aspectFill"
+                />
+                <view class="post-user__content">
+                    <view class="post-user__nickname">{{user.nickname}}</view>
+                    <view class="post-user__extra">{{user.extra}}</view>
+                </view>
+            </view>
+            <view class="post-user__follow">
+                <image src="/images/icon_follow.png"/>
+                <text>关注</text>
+            </view>
+        </view>
+        <view class="post-content">
+            狗狗是人类的最好的朋友，它们忠诚可靠，守护着他们的主人不离不弃。甚至，比生命更为重要。
+        </view>
+        <view class="post-imgs">
+            <block wx:for="{{imgs}}" wx:key="*this">
+                <image class="post-img" src="{{item}}" mode="aspectFill" data-index="{{index}}" bind:tap="onPreviewImg"/>
+            </block>
+        </view>
+        <view class="post-date">2021-05-25 10:34:56</view>
+    </view>
+    <view class="vx-split-line"></view>
+    
+    <vx-card title="用户评论">
+
+    </vx-card>
+</view>

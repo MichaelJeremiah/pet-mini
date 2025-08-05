@@ -1,0 +1,10 @@
+{
+    "navigationBarTitleText": "",
+    "usingComponents": {
+        "vx-card": "/components/card/index",
+        "vx-rater": "/components/rater/index",
+        "vx-navbar-fake": "/components/navbar-fake/index",
+        "biz-comment-card": "../components/comment-card/index",
+        "biz-doctor-card": "/components/doctor-card/index"
+    }
+}

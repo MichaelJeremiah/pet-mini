@@ -1,0 +1,25 @@
+<view class="{{ ss.wrap }}">
+    <view class="vx-tabbar__inner">
+        <view class="vx-tabbar__item-wrap" data-index="{{index}}" mut-bind:tap="onTapItem" style="width:{{750/tabList.length}}rpx" wx:for="{{tabList}}" wx:key="index">
+            <get-user-profile wx:if="{{ item.key === 'VipPayCode' }}" bind:click="handleUserProfile">
+                <view class="vx-tabbar__item-custom">
+                    <image class="vx-tabbar__item-custom__image" src="https://cdn.weipaitang.com/static/20210622e513f82d-a58e-f82da58e-b861-ae6bde08e832-W46H46" />
+                </view>
+            </get-user-profile>
+            <view class="vx-tabbar__item-container {{item.key}}" wx:else>
+                <!-- 标签图标 -->
+                <image class="vx-tabbar__item-image {{selectedIndex===index?'vx-tabbar__item-image--selected':''}}" src="{{selectedIndex===index?item.selectedIconPath:item.iconPath}}" />
+                <!-- 标签文字 -->
+                <view wx:if="{{item.text!==undefined}}" class="vx-tabbar__item-text {{selectedIndex===index?'tab-bar__item-text--selected':''}}" style="color:{{selectedIndex===index?textSelectedColor:textColor}}">
+                    {{item.text}}
+                </view>
+                <view wx:if="{{item.key === 'ShopCart' && cartCount !== '' && cartCount > 0 }}" class="cart-count">
+                    {{cartCount}}
+                </view>
+                <view wx:if="{{item.key === 'ShopCart' &&  cartCount === '' && count > 0}}" class="cart-count">
+                    {{count}}
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

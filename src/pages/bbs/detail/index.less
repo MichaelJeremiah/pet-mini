@@ -1,0 +1,89 @@
+@import 'themes';
+@import 'mixins';
+
+.post {
+    padding: 30rpx;
+
+    &-header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &-user {
+        display: flex;
+        align-items: center;
+        margin-bottom: 24rpx;
+
+        &__avatar {
+            width: 80rpx;
+            height: 80rpx;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+        &__content {
+            padding-left: 16rpx;
+        }
+
+        &__nickname {
+            font-size: 30rpx;
+            font-weight: 500;
+            color: @text-color-secondary;
+        }
+
+        &__extra {
+            font-size: 24rpx;
+            color: #999;
+            margin-top: 4rpx;
+        }
+        
+        &__follow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 120rpx;
+            height: 54rpx;
+            border: 1rpx solid @primary-color;
+            border-radius: 28rpx;
+            color: @primary-color;
+            font-size: 24rpx;
+
+            > image {
+                width: 20rpx;
+                height: 20rpx;
+                margin-right: 10rpx;
+            }
+        }
+    }
+
+    &-imgs {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 16rpx;
+
+        > image {
+            display: inline-block;
+            width: 223rpx;
+            height: 223rpx;
+            margin-right: 10rpx;
+            margin-bottom: 10rpx;
+            vertical-align: top;
+            border-radius: 20rpx;
+
+            &:nth-child(3n) {
+                margin-right: 0;
+            }
+        }
+    }
+
+    &-content {
+        font-size: 28rpx;
+        color: @text-color-secondary;
+        margin-bottom: 24rpx;
+    }
+
+    &-date {
+        font-size: 24rpx;
+        color: #999;
+    }
+}

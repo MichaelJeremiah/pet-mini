@@ -1,0 +1,99 @@
+@import 'themes';
+@import 'mixins';
+
+.@{vx-prefix}-navbar {
+    &__placeholder {
+        height: 45px;
+    }
+
+    &__inner {
+        position: relative;
+        z-index: 999;
+        display: flex;
+        align-items: center;
+        height: 45px;
+        background-color: #fff;
+        color: #444;
+    }
+
+    &__left {
+        padding-left: 16px;
+        box-sizing: border-box;
+    }
+
+    &__left,
+    &__center {
+        display: flex;
+        align-items: center;
+        height: 100%;
+    }
+
+    &__center {
+        flex: 1;
+        justify-content: center;
+        font-size: 16px;
+        font-weight: 500;
+        white-space: nowrap;
+    }
+
+    &--fixed &__inner {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    &--virtual &__placeholder {
+        display: none;
+    }
+
+    &__back {
+        font-size: 12px;
+        width: 2em;
+        height: 2em;
+        -webkit-mask: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='24' viewBox='0 0 12 24'%3E %3Cpath fill-opacity='.9' fill-rule='evenodd' d='M10 19.438L8.955 20.5l-7.666-7.79a1.02 1.02 0 0 1 0-1.42L8.955 3.5 10 4.563 2.682 12 10 19.438z'/%3E%3C/svg%3E")
+            no-repeat 50% 50%;
+        mask: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='24' viewBox='0 0 12 24'%3E %3Cpath fill-opacity='.9' fill-rule='evenodd' d='M10 19.438L8.955 20.5l-7.666-7.79a1.02 1.02 0 0 1 0-1.42L8.955 3.5 10 4.563 2.682 12 10 19.438z'/%3E%3C/svg%3E")
+            no-repeat 50% 50%;
+        -webkit-mask-size: 1em 2em;
+        mask-size: 1em 2em;
+        -webkit-mask-position: left center;
+        mask-position: left center;
+        background-color: currentColor;
+    }
+
+    &__home {
+        font-size: 12px;
+        width: 2em;
+        height: 2em;
+        background: url('https://cdn.weipaitang.com/static/202109101694e6da-4c37-e6da4c37-49d2-d929d8c8e824-W48H48') no-repeat center center;
+        background-size: 100%;
+        background-position: center center;
+    }
+
+    &-capsule {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 12px;
+        width: 87px;
+        height: 32px;
+        background: url('https://cdn.weipaitang.com/static/20210910d53ea078-986b-a078986b-8359-fa314579ced8-W174H64') no-repeat center
+            center;
+        background-size: 100%;
+
+        &__back {
+            width: 20px;
+            height: 20px;
+            background: url('//cdn.weipaitang.com/static/20210910685189a0-265e-89a0265e-5afc-c83b0500880f-W48H48') no-repeat center center;
+            background-size: 100%;
+        }
+
+        &__home {
+            width: 20px;
+            height: 20px;
+            background: url('//cdn.weipaitang.com/static/202109101694e6da-4c37-e6da4c37-49d2-d929d8c8e824-W48H48') no-repeat center center;
+            background-size: 100%;
+        }
+    }
+}

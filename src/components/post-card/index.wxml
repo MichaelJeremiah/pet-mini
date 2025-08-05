@@ -1,0 +1,43 @@
+<view class="post-card" bind:tap="onTap">
+    <view class="post-card-header">
+        <view class="post-card-user">
+            <image 
+                class="post-card-user__avatar" 
+                src="{{user.avatar}}"
+                mode="aspectFill"
+            />
+            <view class="post-card-user__content">
+                <view class="post-card-user__nickname">{{user.nickname}}</view>
+                <view class="post-card-user__extra">{{user.extra}}</view>
+            </view>
+        </view>
+    </view>
+
+    <view class="post-card-content">
+        狗狗是人类的最好的朋友，它们忠诚可靠，守护着他们的主人不离不弃。甚至，比生命更为重要。
+    </view>
+    
+    <scroll-view class="post-card-imgs-scroll" scroll-x="true" scroll-y="false" >
+        <view class="post-card-imgs" style="width: {{ 264 * 4 - 24 }}rpx">
+            <image class="post-card-img" src="https://s2-1257336670.cos.ap-shanghai.myqcloud.com/images/hmbx3k-1670319244977-W150H150.png" mode="aspectFill" />
+            <image class="post-card-img" src="https://s2-1257336670.cos.ap-shanghai.myqcloud.com/images/hmbx3k-1670319244977-W150H150.png" mode="aspectFill" />
+            <image class="post-card-img" src="https://s2-1257336670.cos.ap-shanghai.myqcloud.com/images/hmbx3k-1670319244977-W150H150.png" mode="aspectFill" />
+            <image class="post-card-img" src="https://s2-1257336670.cos.ap-shanghai.myqcloud.com/images/hmbx3k-1670319244977-W150H150.png" mode="aspectFill" />
+        </view>
+    </scroll-view>
+
+
+    <view class="post-card-footer">
+        <view class="post-card-comment"></view>
+        <view class="post-card-action">
+            <view class="post-card-action-btn" catch:tap>
+                <image src="/images/icon_like.png" />
+                <text>268</text>
+            </view>
+            <view class="post-card-action-btn" catch:tap>
+                <image src="/images/icon_comment.png" />
+                <text>14</text>
+            </view>
+        </view>
+    </view>
+</view>

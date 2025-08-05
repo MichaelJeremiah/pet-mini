@@ -1,0 +1,24 @@
+<vx-navbar title="发布动态" />
+
+<view class="container">
+    <textarea 
+        class="content" 
+        placeholder="分享新鲜事" 
+        placeholder-style="font-size: 32rpx; color: #999;"
+        maxlength="200"
+        auto-focus
+    ></textarea>
+
+    <view class="upload">
+        <block wx:for="{{imgs}}" wx:key="*this">
+            <image class="upload-img" src="{{item}}" mode="aspectFill"/>
+        </block>
+        <view wx:if="{{imgs.length < 9}}" class="upload-btn" bind:tap="onChooseImage">
+            <image src="/images/icon_upload.png" />
+        </view>
+    </view>
+
+    <vx-fixed-footer>
+        <view class="button">立即发布</view>
+    </vx-fixed-footer>
+</view>

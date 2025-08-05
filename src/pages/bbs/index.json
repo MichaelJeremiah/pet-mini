@@ -1,0 +1,7 @@
+{
+    "navigationBarTitleText": "",
+    "usingComponents": {
+        "bbs-navbar": "./components/navbar/index",
+        "biz-post-card": "/components/post-card/index"
+    }
+}

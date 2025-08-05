@@ -1,0 +1,4 @@
+src/npm
+node_modules
+dist
+docs

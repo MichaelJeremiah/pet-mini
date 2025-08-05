@@ -1,0 +1,102 @@
+/**
+ * 时间格式化
+ * 支持YYYY MM DD hh mm ss
+ */
+var dateFormat = function (timestamp, formate = 'YYYY-MM-DD hh:mm') {
+    var t = timestamp;
+    if (!t || t === '') {
+        return '';
+    }
+    if (`${t}`.length === 10) {
+        t = t * 1000;
+    }
+    // eslint-disable-next-line no-undef
+    var time = getDate(t);
+    var year = time.getFullYear();
+    var month = time.getMonth() + 1;
+    var date = time.getDate();
+    var hour = time.getHours();
+    var minute = time.getMinutes();
+    var second = time.getSeconds();
+    month = month < 10 ? `0${month}` : month;
+    date = date < 10 ? `0${date}` : date;
+    hour = hour < 10 ? `0${hour}` : hour;
+    minute = minute < 10 ? `0${minute}` : minute;
+    second = second < 10 ? `0${second}` : second;
+
+    // 如果存在自定义格式 则返回格式化
+    if (formate) {
+        return formate
+            .toString()
+            .replace('YYYY', year)
+            .replace('MM', month)
+            .replace('DD', date)
+            .replace('hh', hour)
+            .replace('mm', minute)
+            .replace('ss', second);
+    }
+
+    return {
+        year: year,
+        month: month,
+        date: date,
+        hour: hour,
+        minute: minute,
+        second: second
+    };
+};
+
+/**
+ * 数字格式化，保留小数位，千分位分隔
+ */
+var numberFormat = function (num, fixedNumber, alwaysShowFixed, disableThousand) {
+    if (isNaN(num)) {
+        return '';
+    }
+    num = Number(num);
+    fixedNumber = Number(fixedNumber);
+
+    if (!isNaN(fixedNumber) && fixedNumber > 0 && !alwaysShowFixed) {
+        // 未强制保留几位小数时，只有小数位不为00时才最终保留，否则依旧不保留
+        var base = Math.pow(10, fixedNumber);
+        fixedNumber = (num * base) % base > 0 ? fixedNumber : 0;
+    }
+    num = num.toFixed(fixedNumber).toString();
+    // eslint-disable-next-line no-undef
+    var re = getRegExp('(-?d+)(d{3})', 'g');
+    if (!disableThousand) {
+        while (re.test(num)) {
+            num = num.replace(re, '$1,$2');
+        }
+    }
+    return num;
+};
+
+/**
+ * 对象转JSON字符串
+ */
+var toJSON = function (object) {
+    return JSON.stringify(object).trim();
+};
+
+var urlSlicePath = function (url = '') {
+    return url.split('cefang.cn').pop().split('?')[0];
+};
+
+var scaleCdnImg = function (url = '') {
+    // eslint-disable-next-line no-undef
+    const regExp = getRegExp('-W(\d+)H(\d+)');
+    const vales = url.match(regExp);
+    if (url.indexOf('cdn.weipaitang.com') > 0 && vales[1] > 750) {
+        return url + '/w/640';
+    }
+    return url;
+};
+
+module.exports = {
+    dateFormat: dateFormat,
+    numberFormat: numberFormat,
+    toJSON: toJSON,
+    urlSlicePath: urlSlicePath,
+    scaleCdnImg: scaleCdnImg
+};

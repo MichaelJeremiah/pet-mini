@@ -1,0 +1,7 @@
+{
+    "component": true,
+    "usingComponents": {
+        "accordion": "../../accordion/index",
+        "accordion-group": "../../accordion-group/index"
+    }
+}

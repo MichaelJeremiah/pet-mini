@@ -1,0 +1,58 @@
+@import "themes";
+@import "mixins";
+
+.console-debug {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.console-list {
+    flex: 1;
+    padding: 0 30rpx;
+    overflow-y: auto;
+}
+
+.console-clear {
+    position: relative;
+    padding: 20rpx 0;
+    text-align: center;
+    color: #07c160;
+
+    &::after {
+        .setTopLine(@border-color-split);
+        border-top-width: @border-width-base;
+    }
+}
+
+.console-part {
+    font-size: 28rpx;
+    margin-bottom: 10rpx;
+
+    &-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 10rpx;
+        
+        &-btn {
+            color: #07c160;        
+        }
+    }
+
+    &-content {
+        background-color: #f7f8f9;
+        padding: 10rpx;
+        border-radius: 4rpx;
+
+        &--error {
+            color: #db0227;
+            background-color: fade(#db0227, 10);
+        }
+
+        &--warn {
+            color: #f89d3c;
+            background-color: fade(#f89d3c, 10);
+        }
+    }
+}

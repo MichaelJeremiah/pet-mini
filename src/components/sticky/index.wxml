@@ -1,0 +1,5 @@
+<view class="vx-class {{ ss.container }}" style="{{fixed ? 'height: ' + height + 'px;' : ''}} z-index: {{zIndex}}">
+  <view class="{{ ss.wrap }}" style="{{transform ? 'transform: translate3d(0, ' + transform + 'px, 0);' : '' }} {{fixed ? 'top: ' + offsetTop + 'px;' : ''}} z-index: {{zIndex}}">
+    <slot />
+  </view>
+</view>

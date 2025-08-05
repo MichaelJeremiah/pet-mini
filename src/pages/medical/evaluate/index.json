@@ -1,0 +1,6 @@
+{
+    "navigationBarTitleText": "",
+    "usingComponents": {
+        "biz-comment-card": "../components/comment-card/index"
+    }
+}

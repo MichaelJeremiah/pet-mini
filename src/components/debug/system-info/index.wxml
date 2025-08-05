@@ -1,0 +1,16 @@
+<vx-popup
+    safeArea
+    visible="{{ visible }}"
+    position="bottom"
+    title="系统信息"
+    closable="{{ true }}"
+    hasFooter="{{ false }}"
+    bind:close="hideSystemInfo"
+>
+    <view class="system-info">
+        <view class="system-info__item" wx:for="{{ systemInfo }}" wx:key="*this">
+            <view class="system-info__label">{{ item.name }}：</view>
+            <view class="system-info__value">{{ item.value }}</view>
+        </view>
+    </view>
+</vx-popup>

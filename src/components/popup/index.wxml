@@ -1,0 +1,26 @@
+<vx-backdrop id="vx-backdrop" wx:if="{{ mask }}" bind:click="onMaskClick" zIndex="{{ zIndex }}" />
+<view class="vx-class {{ ss.wrap }}" style="{{ extStyle }}">
+    <vx-animation-group vx-class="{{ prefixCls }}" in="{{ popupVisible }}" classNames="{{ transitionName }}" bind:exited="onExited" wrapStyle="{{ { zIndex } }}" mountOnEnter="{{ mountOnEnter }}" unmountOnExit="{{ unmountOnExit }}">
+        <view class="vx-content-class {{ ss.content }}">
+            <view class="vx-header-class {{ ss.hd }}" wx:if="{{ hasHeader }}">
+                <view class="{{ ss.title }}" wx:if="{{ title }}">{{ title }}</view>
+                <block wx:else>
+                    <slot name="header"></slot>
+                </block>
+            </view>
+            <view class="vx-body-class {{ ss.bd }}">
+                <view wx:if="{{ content }}">{{ content }}</view>
+                <slot></slot>
+            </view>
+            <view class="vx-footer-class {{ ss.ft }}" wx:if="{{ hasFooter }}">
+                <view class="{{ ss.extra }}" wx:if="{{ extra }}">{{ extra }}</view>
+                <block wx:else>
+                    <slot name="footer"></slot>
+                </block>
+            </view>
+            <view class="vx-close-class {{ ss.close }}" wx:if="{{ closable }}" bindtap="close">
+                <text class="{{ ss.x }}"></text>
+            </view>
+        </view>
+    </vx-animation-group>
+</view>

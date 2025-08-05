@@ -1,0 +1,40 @@
+@import 'themes';
+@import 'mixins';
+
+.@{vx-prefix}-rater {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    line-height: normal;
+    vertical-align: middle;
+    font-weight: 400;
+    font-style: normal;
+    text-align: left;
+    .clearfix();
+
+    &__star {
+        position: relative;
+        display: inline-block;
+    }
+
+    &__star:last-child &__box {
+        padding-right: 2px !important;
+        margin-right: 0 !important;
+    }
+
+    &__box {
+        position: relative;
+        display: inline-block;
+        text-align: center;
+        cursor: pointer;
+        transition: color 0.3s ease;
+
+        &--disabled {
+            cursor: not-allowed;
+        }
+    }
+
+    &__icon {
+        vertical-align: top;
+    }
+}

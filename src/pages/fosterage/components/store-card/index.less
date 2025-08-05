@@ -1,0 +1,52 @@
+@import 'themes';
+@import 'mixins';
+
+.store-card {
+    position: relative;
+    display: flex;
+    padding: 30rpx;
+
+    &::after {
+        .setBottomLine(#ececec);
+        left: 30rpx;
+        right: 30rpx;
+    }
+
+    &-img {
+        width: 220rpx;
+        height: 180rpx;
+        border-radius: 8rpx;
+        overflow: hidden;
+    }
+
+    &-content {
+        padding-left: 24rpx;
+    }
+
+    &-name {
+        font-size: 32rpx;
+        font-weight: 500;
+        color: @text-color;
+        line-height: 48rpx;
+    }
+
+    &-address {
+        font-size: 24rpx;
+        color: #999;
+        line-height: 36rpx;
+    }
+
+    &-distance {
+        display: flex;
+        align-items: center;
+        font-size: 22rpx;
+        color: #999;
+        line-height: 36rpx;
+
+        &__icon {
+            width: 20rpx;
+            height: 24rpx;
+            margin-right: 10rpx;
+        }
+    }
+}

@@ -1,0 +1,7 @@
+{
+    "navigationBarTitleText": "医疗",
+    "usingComponents": {
+        "vx-card": "/components/card/index",
+        "biz-hospital-card": "../components/hospital-card/index"
+    }
+}

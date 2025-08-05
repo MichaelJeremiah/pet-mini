@@ -1,0 +1,5 @@
+<view class="vx-class {{ ss.wrap }}">
+    <image class="vx-empty__icon" mode="aspectFit" src="{{ image || images[type] }}"/>
+    <text class="vx-empty__text">{{ tip || tips[type] }}</text>
+    <slot></slot>
+</view>

@@ -1,0 +1,24 @@
+<vx-navbar title="" />
+
+<view class="container">
+    <view class="info">
+        <image class="info-img" src="https://s2-1257336670.cos.ap-shanghai.myqcloud.com/images/gnntqy-1670300109330-W110H90.png" mode="aspectFill"/>
+        <view class="info-content">
+            <view class="info-name">小型犬洗澡美容套餐</view>
+            <view class="info-store">
+                <image class="info-store__icon" src="/images/icon_store.png" />
+                <text>金金萌宠店</text>
+            </view>
+            <view class="info-desc">包含小型犬洗澡、美容服务、洁白洁牙</view>
+            <view class="info-sales">半年消费 37</view>
+        </view>
+    </view>
+
+    <view class="vx-split-line"/>
+
+    <vx-card title="服务介绍">
+        <view class="intro">
+            <image src="https://s2-1257336670.cos.ap-shanghai.myqcloud.com/images/zz1go1-1670310569235-W345H496.png" mode="widthFix" />
+        </view>
+    </vx-card>
+</view>

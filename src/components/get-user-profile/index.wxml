@@ -1,0 +1,3 @@
+<view class="vx-class" bindtap="handleUserProfile">
+    <slot></slot>
+</view>

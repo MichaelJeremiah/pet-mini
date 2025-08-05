@@ -1,0 +1,16 @@
+<view class="article-card" bind:tap="onTap">
+    <image class="article-card-img" src="{{img}}" mode="widthFix" />
+    <view class="article-card-content">
+        <view class="article-card-title">酷揭秘！为什呢你的狗狗不愿意睡狗窝！</view>
+        <view class="article-card-other">
+            <view class="article-card-user">
+                <image src="https://s2-1257336670.cos.ap-shanghai.myqcloud.com/images/qpivhe-1670312222466-W120H120.png" />
+                <text>瑞派我宠我爱</text>
+            </view>
+            <view class="article-card-view">
+                <image src="/images/icon_eye.png" />
+                <text>867</text>
+            </view>
+        </view>
+    </view>
+</view>

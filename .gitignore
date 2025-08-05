@@ -1,0 +1,14 @@
+.git
+.DS_Store
+
+dist
+node_modules
+sourcemaps
+
+yarn-error.log
+npm-error.log
+.stylelintcache
+
+ext.json
+
+src/constants/config.js

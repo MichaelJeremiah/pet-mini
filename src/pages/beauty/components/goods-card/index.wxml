@@ -1,0 +1,15 @@
+<view class="goods-card" bind:tap="onTap">
+    <image 
+        class="goods-card-img" 
+        src="{{img}}" 
+        mode="aspectFill"
+    />
+
+    <view class="goods-card-content">
+        <view class="goods-card-name">{{name}}</view>
+        <view class="goods-card-desc">{{desc}}</view>
+        <view class="goods-card-extra">
+            <view class="goods-card-price">{{price}}</view>
+        </view>
+    </view>
+</view>

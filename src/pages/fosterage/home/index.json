@@ -1,0 +1,7 @@
+{
+    "navigationBarTitleText": "寄养",
+    "usingComponents": {
+        "vx-card": "/components/card/index",
+        "biz-store-card": "../components/store-card/index"
+    }
+}

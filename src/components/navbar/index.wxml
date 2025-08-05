@@ -1,0 +1,17 @@
+<view class="vx-class {{ ss.wrap }}">
+    <view class="{{ ss.placeholder }}" style="padding-top: {{ statusBarHeight }}px" />
+    <view class="{{ ss.inner }}" style="padding-top: {{ statusBarHeight }}px; background-color: {{ background }}; color: {{ color }}; width: {{ innerWidth }}px; padding-right: {{ sideWidth }}px;">
+        <view class="{{ ss.left }}" style="width: {{ sideWidth }}px">
+            <block wx:if="{{ showBack || alwaysShowBack }}">
+                <view wx:if="{{ capsule }}" class="{{ ss.capsule }}">
+                    <view class="{{ ss.capsuleBack }}" bind:tap="handleBack" />
+                    <view class="{{ ss.capsuleHome }}" bind:tap="handleHome" />
+                </view>
+                <view wx:else class="{{ ss.back }}" bind:tap="handleBack" />
+            </block>
+        </view>
+        <view class="{{ ss.center }}">{{ title }}</view>
+        <view class="{{ ss.right }}"></view>
+    </view>
+</view>
+<vx-debug />

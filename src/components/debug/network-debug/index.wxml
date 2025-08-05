@@ -1,0 +1,61 @@
+<wxs src="../../../wxs/filter.wxs" module="filter" />
+<template name="collapseList">
+    <view class="network-part">
+        <view class="network-part-header">
+            <view class="network-part-header-label">{{title}}</view>
+            <view class="network-part-header-operate" wx:if="{{!noDisplayFormat}}">
+                <view
+                    bind:tap="handleFormatText"
+                    data-requestlist="{{ {parentIndex: index, data: item[key], currentKey: key} }}"
+                    class="btn"
+                    >格式化</view
+                >
+            </view>
+        </view>
+        <view
+            class="network-part-content"
+            bind:tap="handleRequestDataCopy"
+            data-requestlist="{{item[key]}}"
+            style="{{item['isFormat' + key] ? 'white-space: pre-wrap' : ''}}"
+        >
+            <text wx:if="{{item['isFormat' + key]}}">{{item['format' + key]}}</text>
+            <text wx:else>{{filter.toJSON(item[key])}}</text>
+        </view>
+    </view>
+</template>
+<view class="network-container" hidden="{{!visibleNetwork}}">
+    <view class="network-list">
+        <accordion-group wx:if="{{networkData.length > 0}}">
+            <accordion
+                name="{{index}}"
+                wx:for="{{networkData}}"
+                wx:key="index"
+            >
+                <view slot="header" class="network-header">
+                    <view 
+                        class="network-header-status {{(item.error || item.status >= 400) ? 'network-header-status--error' : ''}}"
+                        catch:tap="handleAllRequestDataCopy"
+                        data-allrequestdata="{{item}}"
+                    >{{item.status}}</view>
+                    <view class="network-header-url">{{filter.urlSlicePath(item.url)}}</view>
+                </view>
+                <template is="collapseList" data="{{title: 'Url', key: 'url', item, index, noDisplayFormat: true }}" />
+                <template is="collapseList" data="{{title: 'Params', key: 'data', item, index }}" />
+                <template
+                    is="collapseList"
+                    data="{{title: 'Method', key: 'method', item, index, noDisplayFormat: true }}"
+                />
+                <template
+                    is="collapseList"
+                    data="{{title: 'Time', key: 'time', item, index, noDisplayFormat: true }}"
+                />
+                <template is="collapseList" data="{{title: 'Header', key: 'header', item, index }}" />
+                <template is="collapseList" data="{{title: 'Response', key: 'response', item, index }}" />
+            </accordion>
+        </accordion-group>
+        <view class="empty" wx:else>
+            <button plain="true" type="primary" size="mini" bindtap="modifyNetworkData">刷新</button>
+        </view>
+    </view>
+    <view class="network-clear" bind:tap="handleClearAllData">清空</view>
+</view>

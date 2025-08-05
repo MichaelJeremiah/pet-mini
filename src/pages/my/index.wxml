@@ -1,0 +1,82 @@
+<vx-navbar title="" virtual background="transparent"/>
+
+<view class="container">
+    <vx-navbar-fake />
+
+    <view class="userinfo">
+        <image class="userinfo-avatar" src="https://s2-1257336670.cos.ap-shanghai.myqcloud.com/images/2joyyy-1670337242940-W176H129.png" mode="aspectFill" />
+        <view class="userinfo-content">
+            <view class="userinfo-nickname">我的王泡芙</view>
+            <view class="userinfo-intro">爱猫猫，爱狗狗</view>
+        </view>
+    </view>
+
+    <view class="data">
+        <view class="data-item">
+            <view class="data-value">158</view>
+            <view class="data-label">粉丝</view>
+        </view>
+        <view class="data-item">
+            <view class="data-value">66</view>
+            <view class="data-label">关注</view>
+        </view>
+        <view class="data-item">
+            <view class="data-value">3152</view>
+            <view class="data-label">被赞</view>
+        </view>
+    </view>
+
+    <view class="menu">
+        <view class="menu-item">
+            <image class="menu-icon" src="/images/my_menu_1.png"/>
+            <view class="menu-label">我的宠物</view>
+        </view>
+        <view class="menu-item">
+            <image class="menu-icon" src="/images/my_menu_2.png"/>
+            <view class="menu-label">服务订单</view>
+        </view>
+        <view class="menu-item">
+            <image class="menu-icon" src="/images/my_menu_3.png"/>
+            <view class="menu-label">我的评价</view>
+        </view>
+        <view class="menu-item">
+            <image class="menu-icon" src="/images/my_menu_4.png"/>
+            <view class="menu-label">我的收藏</view>
+        </view>
+    </view>
+
+    <view class="vx-split-line"></view>
+
+    <view class="cell-group">
+        <navigator class="cell" target="self" url="/pages/user/index" hover-class="navigator-hover" open-type="navigate">
+            <image class="cell-icon" src="/images/my_cell_1.png"/>
+            <view class="cell-title">我的发布</view>
+            <image class="cell-arrow" src="/images/icon_arrow.png" />
+        </navigator>
+        <view class="cell">
+            <image class="cell-icon" src="/images/my_cell_2.png"/>
+            <view class="cell-title">我的寄养</view>
+            <image class="cell-arrow" src="/images/icon_arrow.png" />
+        </view>
+        <view class="cell">
+            <image class="cell-icon" src="/images/my_cell_3.png"/>
+            <view class="cell-title">我的收藏</view>
+            <image class="cell-arrow" src="/images/icon_arrow.png" />
+        </view>
+    </view>
+
+    <view class="vx-split-line"></view>
+
+    <view class="cell-group">
+        <view class="cell">
+            <image class="cell-icon" src="/images/my_cell_4.png"/>
+            <view class="cell-title">实名认证</view>
+            <image class="cell-arrow" src="/images/icon_arrow.png" />
+        </view>
+        <navigator class="cell" target="self" url="/pages/my/account/index" hover-class="navigator-hover" open-type="navigate">
+            <image class="cell-icon" src="/images/my_cell_5.png"/>
+            <view class="cell-title">账户设置</view>
+            <image class="cell-arrow" src="/images/icon_arrow.png" />
+        </navigator>
+    </view>
+</view>

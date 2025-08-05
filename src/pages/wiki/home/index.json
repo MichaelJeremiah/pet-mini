@@ -1,0 +1,9 @@
+{
+    "navigationBarTitleText": "",
+    "usingComponents": {
+        "vx-tabs": "/components/tabs/index",
+        "vx-tab": "/components/tab/index",
+        "vx-sticky": "/components/sticky/index",
+        "biz-article-card": "../components/article-card/index"
+    }
+}

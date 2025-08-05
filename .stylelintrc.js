@@ -1,0 +1,63 @@
+module.exports = {
+  extends: ['stylelint-config-standard', 'stylelint-config-prettier'],
+  rules: {
+    'block-no-empty': true,
+    'color-no-invalid-hex': true,
+    'function-calc-no-unspaced-operator': true,
+    'max-empty-lines': [
+      1,
+      {
+        ignore: ['comments']
+      }
+    ],
+    'declaration-block-single-line-max-declarations': null,
+    'unit-no-unknown': [
+      true,
+      {
+        ignoreUnits: ['/rpx/']
+      }
+    ],
+    'selector-type-no-unknown': [
+      true,
+      {
+        ignore: ['custom-elements'],
+        ignoreTypes: ['page', 'text', 'view', 'swiper', 'swiper-item']
+      }
+    ],
+    'keyframe-declaration-no-important': null,
+    'comment-no-empty': true,
+    'no-extra-semicolons': true,
+    'color-named': [
+      'never',
+      {
+        ignore: ['inside-function']
+      }
+    ],
+    'color-hex-length': null,
+    'color-hex-case': 'lower',
+    'value-list-comma-space-before': 'never',
+    'value-list-comma-space-after': 'always',
+    'selector-combinator-space-after': 'always',
+    'block-opening-brace-space-before': 'always',
+    'declaration-colon-space-after': 'always',
+    'no-descending-specificity': null,
+    "no-empty-source": null,
+    'at-rule-no-unknown': null,
+    'length-zero-no-unit': true,
+    'comment-empty-line-before': [
+      'never',
+      {
+        except: ['first-nested'],
+        ignore: ['after-comment', 'stylelint-commands']
+      }
+    ],
+    'declaration-empty-line-before': 'never',
+    'selector-pseudo-element-colon-notation': 'double',
+    'no-duplicate-selectors': [
+      true,
+      {
+        disallowInList: false
+      }
+    ]
+  }
+}
