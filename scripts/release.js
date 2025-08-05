@@ -10,9 +10,7 @@ const utils = require('./utils');
 const { wxConfig } = utils.getWxConfig();
 
 const isvList = {
-    'wx49a127b04708655c': '微拍堂策方-测试',
-    'wx5390da723a1487fc': '微拍堂策方',
-    'wxbe4e25610fb29520': '成都策方'
+    'wx49a127b04708655c': '萌友圈',
 };
 
 const choices = Object.keys(wxConfig.extConfig).map(key => {
@@ -53,8 +51,6 @@ inquirer.prompt([
     const { mini, tpl } = answers;
 
     if (mini === 'qsx') {
-        console.log();
-        console.log('当前打包小程序为微拍堂武林专用，将隐藏会员模块');
         console.log();
     }
 
